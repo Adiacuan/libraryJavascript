@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id='clock'></div>
+
+
+<script>
+    let clock = document.getElementById('clock');
+     setInterval(() => {
+        let date = new Date();
+        let hour= date.getHours();
+        let minutes=date.getMinutes();
+        let seconds=date.getSeconds();
+    clock.innerHTML=`${hour} : ${(minutes<10?'0':'') + minutes} : ${seconds}`
+            
+     }, 1000);
+     
+</script>   
+</body>
+</html>
